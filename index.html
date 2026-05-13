@@ -2,226 +2,923 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="skill.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayatri Ghogare | Frontend Developer Portfolio</title>
+    <meta name="description"
+        content="Frontend Developer with hands-on experience in responsive web development, cloud deployment, Android development, Firebase, API integration, and AI-powered projects.">
+
+    <!-- Fonts: Inter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons: Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="#skills-section">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-    </ul>
-  </nav>
-  </br>
-  </br>
-  </br>
+    <div id="scroll-progress"></div>
 
-  <section class="intro-wrapper">
-
-    <!-- Left: Profile Photo -->
-    <div class="intro-photo">
-      <!-- Add your image here -->
-      <img src="Gy.jpg" alt="Profile Photo">
-    </div>
-
-    <!-- Right: Name + Info -->
-    <div class="intro-text">
-      <h1 class="intro-name">Gayatri Ghogare</h1>
-
-      <p class="intro-details">
-        Android Developer | Web Developer (HTML, CSS, JavaScript) <br>
-        Email: ghogareg474@.com <br>
-        Location: Nashik,Maharashtra, India
-      </p>
-    </div>
-    <div class="social-links">
-      <a href="https://github.com/gayatridot" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/gayatri-ghogare-b86948330" aria-label="LinkedIn"><i
-          class="fa-brands fa-linkedin"></i></a>
-    </div>
-  </section>
-
-
-  <section class="career-objective">
-    <h2>Career Objective</h2>
-    <p>
-      Aspiring Android Developer seeking an internship where I can apply my skills in Kotlin,
-      Android Studio, API integration, and UI design. I also have working knowledge of web
-      technologies like HTML, CSS, and JavaScript, which helps me understand frontend workflows.
-      I’m eager to learn from experienced developers, contribute to real projects, and grow
-      through hands-on industry experience.
-    </p>
-
-  </section>
-  </br>
-  </br>
-  <section id="skills-section">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-      <!-- Android Development -->
-      <div class="skill-card">
-        <h3 class="skill-title">Android Development</h3>
-        <ul class="skill-list">
-          <li><span class="icon">🤖</span>Kotlin</li>
-          <li><span class="icon">📱</span>Android Studio</li>
-          <li><span class="icon">🌐</span>Retrofit / API Integration</li>
-          <li><span class="icon">🧩</span>XML UI Design</li>
-          <li><span class="icon">🔧</span>Git & GitHub</li>
-        </ul>
-      </div>
-
-      <!-- Programming -->
-      <div class="skill-card">
-        <h3 class="skill-title">Programming</h3>
-        <ul class="skill-list">
-          <li><span class="icon">☕</span>Java</li>
-          <li><span class="icon">🐍</span>Python (Basics)</li>
-        </ul>
-      </div>
-
-      <!-- Web Basics -->
-      <div class="skill-card">
-        <h3 class="skill-title">Web Basics</h3>
-        <ul class="skill-list">
-          <li><span class="icon">📄</span>HTML</li>
-          <li><span class="icon">🎨</span>CSS</li>
-          <li><span class="icon">🧪</span>JavaScript (Beginner)</li>
-        </ul>
-      </div>
-
-      <!-- Tools & Platforms -->
-      <div class="skill-card">
-        <h3 class="skill-title">Tools & Platforms</h3>
-        <ul class="skill-list">
-          <li><span class="icon">🖥️</span>Windows</li>
-          <li><span class="icon">🐧</span>Ubuntu</li>
-          <li><span class="icon">🧩</span>VS Code</li>
-        </ul>
-      </div>
-
-      <!-- Additional Skills -->
-      <div class="skill-card">
-        <h3 class="skill-title">Additional Skills</h3>
-        <ul class="skill-list">
-          <li><span class="icon">📊</span>Excel</li>
-          <li><span class="icon">📈</span>Power BI</li>
-          <li><span class="icon">🧠</span>DSA</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-  </br>
-  </br>
-
-  <!-- Experience  -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-
-      <!-- Eduskills Cohort Internship -->
-      <div class="experience-card">
-        <div class="experience-header">
-          <h3 class="experience-title">Eduskills Android Cohort Internship</h3>
-          <span class="date">October 2025 – December 2025</span>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">GAYATRI<span>.</span></a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon" style="display: none;"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Let's
+                    Talk</a>
+            </div>
         </div>
-        <p class="experience-meta">Structured training program focused on Android development fundamentals.</p>
-        <ul>
-          <li>Built <strong>News App</strong> with API integration and JSON parsing.</li>
-          <li>Developed <strong>Music App</strong> with media playback and file handling.</li>
-          <li>Practiced <strong>Fuel Estimator App</strong> with multiple activities.</li>
-          <li>Skills gained: Kotlin, Android Studio, Retrofit, XML UI design, Git/GitHub workflows.</li>
-        </ul>
-      </div>
+    </nav>
 
-      <!-- Independent Web Development -->
-      <div class="experience-card">
-        <div class="experience-header">
-          <h3 class="experience-title">Independent Web Development Practice</h3>
-          <span class="date">June 2025 – September 2025</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i data-lucide="sparkles" size="18"></i>
+                            Open to Frontend, Android & AI Roles
+                        </div>
+                        <h1>Gayatri Ghogare</h1>
+                        <h2 id="typing-text"></h2>
+                        <p>I architect responsive web experiences, deploy robust cloud solutions, and develop
+                            intelligent Android applications that solve real-world problems.</p>
+
+                        <div class="hero-btns">
+                            <a href="#projects" class="btn btn-primary">
+                                View My Work
+                                <i data-lucide="arrow-right" size="20"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/Gy.jpg" alt="Gayatri Ghogare" id="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-float">
+                <a href="https://github.com/gayatridot" target="_blank" title="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gayatri-ghogare-b86948330/" target="_blank" title="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:ghogareg474@gmail.com" title="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="text-gradient">Driven by Curiosity, Defined by Execution</h2>
+                        <p>I'm a final-year engineering student with a deep-seated passion for building software that
+                            matters. From the meticulous structure of frontend layouts to the complex logic of
+                            AI-powered assistants, I thrive on the challenge of turning ideas into functional, deployed
+                            realities.</p>
+                        <p>My journey has taken me through <strong>responsive web development</strong>, <strong>cloud
+                                orchestration</strong>, and <strong>Android ecosystems</strong>. I don't just write
+                            code; I build solutions that are scalable, accessible, and user-centric.</p>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <h4>10+</h4>
+                                <p>Projects Built</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>5+</h4>
+                                <p>Cloud Deploys</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="skill-category">
+                            <h3><i data-lucide="code-2"></i> My Core Philosophy</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">"Code is a tool to solve human
+                                problems. Performance, aesthetics, and accessibility are not optional—they are the
+                                foundation of every professional application."</p>
+                            <div class="skill-items">
+                                <span class="skill-item">Clean Code</span>
+                                <span class="skill-item">Performance First</span>
+                                <span class="skill-item">User Centric</span>
+                                <span class="skill-item">Cloud Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Arsenal</h2>
+                    <p>A curated selection of technologies I've mastered to build high-performance applications.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-code"></i> Frontend Ecosystem</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">React.js</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">JavaScript (ES6+)</span>
+                            <span class="skill-item">Tailwind CSS</span>
+                            <span class="skill-item">HTML5 & CSS3</span>
+                            <span class="skill-item">Responsive Design</span>
+                            <span class="skill-item">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-mobile-screen"></i> Mobile Development</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Kotlin</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">Android Studio</span>
+                            <span class="skill-item">Jetpack Compose</span>
+                            <span class="skill-item">Firebase SDK</span>
+                            <span class="skill-item">MVVM Architecture</span>
+                            <span class="skill-item">Push Notifications</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-brain"></i> AI & Data Science</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Prompt Engineering</span>
+                            <span class="skill-item">Generative AI</span>
+                            <span class="skill-item">MongoDB / MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fa-solid fa-server"></i> Cloud & DevOps</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Google Cloud (GCP)</span>
+                            <span class="skill-item">Google Cloud Run</span>
+                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">CI/CD Workflows</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Firebase</span>
+                            <span class="skill-item">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>Evidence of my ability to build, optimize, and deploy real-world software.</p>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Projects</button>
+                    <button class="filter-tab" data-filter="web">Web Apps</button>
+                    <button class="filter-tab" data-filter="android">Mobile</button>
+                    <button class="filter-tab" data-filter="ai">AI Solutions</button>
+                </div>
+
+                <div class="projects-grid" id="projects-container">
+
+                    <!-- Project 1: VenueShield AI -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-thumb">
+                            <img src="assets/project-venueshield.png" alt="VenueShield AI">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Web / Firebase / AI</span>
+                            <h3>VenueShield AI</h3>
+                            <p class="project-description">A full-stack crisis management platform designed for large
+                                venue safety and emergency response orchestration.</p>
+                            <ul class="project-features">
+                                <li>Real-time emergency override system</li>
+                                <li>Firebase Auth & Firestore integration</li>
+                                <li>Deployed on Google Cloud Run for high availability</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Firebase</span>
+                                <span class="tech-pill">Cloud Functions</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://smart-venue-navigator-842080432300.us-central1.run.app/"
+                                    class="btn btn-primary" target="_blank">Live Demo <i data-lucide="external-link"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/VenueShield-AI-Crisis-Response"
+                                    class="btn btn-outline" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: MatData Assistant -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-thumb">
+                            <img src="assets/project-matdata.png" alt="MatData Assistant">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">AI / Election / Web</span>
+                            <h3>MatData Assistant</h3>
+                            <p class="project-description">AI-powered guidance assistant helping first-time Indian
+                                voters navigate the registration and voting process.</p>
+                            <ul class="project-features">
+                                <li>Natural Language Processing (NLP) integration</li>
+                                <li>Location-based polling station discovery</li>
+                                <li>Interactive documentation generator</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">AI Models</span>
+                                <span class="tech-pill">Google Maps API</span>
+                                <span class="tech-pill">Google Cloud Run</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://matdaata-assistant-359744423304.us-central1.run.app/"
+                                    class="btn btn-primary" target="_blank">Live Demo <i data-lucide="external-link"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/Matdata" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Emotions Analyzer -->
+                    <div class="project-card" data-category="android">
+                        <div class="project-thumb">
+                            <img src="assets/project-emotions.png" alt="Emotions Analyzer">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Android / Kotlin / ML</span>
+                            <h3>Human Emotions Analyzer</h3>
+                            <p class="project-description">An Android application that uses machine learning to detect
+                                emotional states from voice and text inputs.</p>
+                            <ul class="project-features">
+                                <li>Real-time voice sentiment analysis</li>
+                                <li>Text-based emotion scoring</li>
+                                <li>Kotlin-first clean architecture</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">NLP API</span>
+                                <span class="tech-pill">Android Studio</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/posts/gayatri-ghogare-b86948330_emotionsense-real-time-emotion-scoring-activity-7436373978979475456-97zq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNu7JYBym-82SehqZkuATdw8gtkShMRLkY"
+                                    class="btn btn-primary" target="_blank">View Demo <i data-lucide="external-link"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/HumanEmotions" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Recipe Genie -->
+                    <div class="project-card" data-category="android">
+                        <div class="project-thumb">
+                            <img src="assets/recipeapp.jpeg" alt="Recipe Genie">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Android / API</span>
+                            <h3>Recipe Genie</h3>
+                            <p class="project-description">Android app using TheMealDB API to suggest recipes based on
+                                ingredients the user has on hand.</p>
+                            <ul class="project-features">
+                                <li>Dynamic API data fetching</li>
+                                <li>Ingredient-based filtering logic</li>
+                                <li>Smooth transition animations</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Retrofit</span>
+                                <span class="tech-pill">TheMealDB API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/posts/gayatri-ghogare-b86948330_androiddevelopment-apiintegration-recyclerview-activity-7422984662119104512-SCcC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNu7JYBym-82SehqZkuATdw8gtkShMRLkY"
+                                    class="btn btn-primary" target="_blank">View Demo <i data-lucide="external-link"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/RecipieGenie" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Study App -->
+                    <div class="project-card" data-category="android">
+                        <div class="project-thumb">
+                            <img src="https://files.catbox.moe/p4pjew.jpeg" alt="Study App">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Android / Productivity</span>
+                            <h3>Study Suite</h3>
+                            <p class="project-description">A comprehensive student productivity app with quizzes, notes,
+                                and task management.</p>
+                            <ul class="project-features">
+                                <li>Firebase-synced todo list</li>
+                                <li>Interactive quiz engine</li>
+                                <li>Progress tracking dashboard</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Firebase</span>
+                                <span class="tech-pill">XML Layouts</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1VkMVqXpv0riodtzRByZFA4hn9MD5dvag/view?usp=sharing"
+                                    class="btn btn-primary" target="_blank">Watch Demo <i data-lucide="play"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/StudyApp" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: To-Do List App -->
+                    <div class="project-card" data-category="android">
+                        <div class="project-thumb">
+                            <img src="https://files.catbox.moe/i1yalb.JPG" alt="To-Do List App">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Android / Productivity</span>
+                            <h3>To-Do List App v1.0</h3>
+                            <p class="project-description">A simple and elegant application to organize tasks, set
+                                reminders, and manage your schedule with ease.</p>
+                            <ul class="project-features">
+                                <li>Task sorting by priority & time</li>
+                                <li>Smart Reminders & Notifications</li>
+                                <li>Chatbot assistant integration (Beta)</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">XML</span>
+                                <span class="tech-pill">Room DB</span>
+                                <span class="tech-pill">Jetpack Components Notifications</span>
+                                <span class="tech-pill">AlarmManager</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary" target="_blank">Watch Demo <i data-lucide="play"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/To-Do-List" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: AWS AI for Bharat Workshop -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-thumb">
+                            <img src="https://files.catbox.moe/iedi0g.PNG" alt="AWS AI for Bharat">
+                            <div class="thumb-overlay">
+                                <span>Workshop Experience</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Cloud / AI / Full-Stack</span>
+                            <h3>AWS AI for Bharat Workshop</h3>
+                            <p class="project-description">Building scalable, cloud-enabled applications using AWS
+                                Amplify and integrating AWS Rekognition & Polly for AI capabilities as a part of
+                                Workshop.</p>
+                            <ul class="project-features">
+                                <li>Full-stack temporary deployment with AWS Amplify</li>
+                                <li>AI-powered Image processing</li>
+                                <li>Scalable cloud architecture integration</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">AWS Amplify</span>
+                                <span class="tech-pill">Rekognition</span>
+                                <span class="tech-pill">Polly</span>
+                                <span class="tech-pill">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://files.catbox.moe/w3cdf3.JPG" class="btn btn-primary"
+                                    target="_blank">View Result <i data-lucide="image" size="16"></i></a>
+                                <a href="https://github.com/gayatridot/Image-Editing-App" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: MyEnv Test Environment -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-thumb"
+                            style="background: linear-gradient(135deg, #1e293b, #0f172a); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                            <div
+                                style="position: absolute; width: 100%; height: 100%; background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.1), transparent); z-index: 1;">
+                            </div>
+                            <i data-lucide="container"
+                                style="width: 80px; height: 80px; color: #38bdf8; z-index: 2;"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Docker / AI / Echo Testing</span>
+                            <h3>MyEnv Test Environment</h3>
+                            <p class="project-description">A lightweight Docker-based environment for echo testing,
+                                Hugging Face Spaces deployment, and API usage demonstrations.</p>
+                            <ul class="project-features">
+                                <li>Automated Docker container management</li>
+                                <li>Hugging Face Spaces deployment</li>
+                                <li>Clean API usage patterns for developers</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">Docker</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Hugging Face</span>
+                                <span class="tech-pill">API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://huggingface.co/spaces/Gayatri-Ghogare123/my-cool-env"
+                                    class="btn btn-primary" target="_blank">Live Space <i data-lucide="external-link"
+                                        size="16"></i></a>
+                                <a href="https://github.com/gayatridot/support-env" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: Yoga & Wellness Studio -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop"
+                                alt="Yoga & Wellness Studio">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Frontend / UI/UX / Health</span>
+                            <h3>Yoga & Wellness Studio</h3>
+                            <p class="project-description">A premium frontend yoga website featuring class schedules,
+                                trainer profiles, and interactive pose guides for a digital platform.</p>
+                            <ul class="project-features">
+                                <li>Responsive multi-page architecture</li>
+                                <li>Interactive Pose & Trainer guides</li>
+                                <li>Semantic HTML5 & Modern CSS3</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-pill">HTML5</span>
+                                <span class="tech-pill">CSS3</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Responsive</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://gayatridot.github.io/Yoga-Website/" class="btn btn-primary"
+                                    target="_blank">Live Demo <i data-lucide="external-link" size="16"></i></a>
+                                <a href="https://github.com/gayatridot/Yoga-Website/" class="btn btn-outline"
+                                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Achievements -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Practical Experience</h2>
+                    <p>Real-world application of skills in professional and academic environments.</p>
+                </div>
+
+                <div class="experience-cards">
+                    <div class="exp-card">
+                        <div class="exp-icon"><i data-lucide="cloud-upload" size="40"></i></div>
+                        <h3>Full-Stack Deployment</h3>
+                        <p>Built and deployed multiple production-ready websites on Cloud and portfolio on Vercel,
+                            implementing CI/CD pipelines
+                            and performance optimizations that resulted in Lighthouse scores above 90.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-icon"><i data-lucide="database" size="40"></i></div>
+                        <h3>Backend Architecture</h3>
+                        <p>Architected real-time data sync solutions using Firebase Firestore and Auth, handling user
+                            authentication and secure data persistence for multiple applications.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-icon"><i data-lucide="smartphone" size="40"></i></div>
+                        <h3>Android Lifecycle</h3>
+                        <p>Developed robust Android applications from scratch, managing full app lifecycles, API
+                            integrations, and intuitive UI/UX using Kotlin and Android Studio.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-icon"><i data-lucide="cpu" size="40"></i></div>
+                        <h3>AI Implementation</h3>
+                        <p>Applied advanced prompt engineering and AI model integrations to create specialized
+                            assistants and sentiment analysis tools for practical use cases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Certifications</h2>
+                    <p>Here are some of the key certifications I've earned through course completion and professional
+                        internships.</p>
+                </div>
+
+                <div class="certs-grid">
+                    <!-- Cert 1: Green Skills & AI -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://files.catbox.moe/olkaiv.png" alt="Edunet Foundation">
+                        </div>
+                        <h3>Green Skills and Artificial Intelligence</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Ghogare</p>
+                            <p class="cert-org">Edunet Foundation | Shell | AICTE</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2: Prompt Engineering -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+                        </div>
+                        <h3>Prompt Engineering for Career Awareness</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Arun Ghogare</p>
+                            <p class="cert-org">CSRBOX | IBM SkillsBuild</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3: AWS Serverless -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                                alt="AWS">
+                        </div>
+                        <h3>Building an Image Editing Serverless Application</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Ghogare</p>
+                            <p class="cert-org">AWS | AI for Bharat | Workshop 3</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4: Android Internship -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                alt="Google">
+                        </div>
+                        <h3>Android Developer Virtual Internship</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Arun Ghogare</p>
+                            <p class="cert-org">Google for Developers | EduSkills</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5: Java Basic -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png"
+                                alt="HackerRank">
+                        </div>
+                        <h3>Java (Basic) Skill Certification</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Ghogare</p>
+                            <p class="cert-org">HackerRank Certification Test</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 6: Oracle AI -->
+                    <div class="cert-card">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle"
+                                width="100px">
+                        </div>
+                        <h3>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                        <div class="cert-user-info">
+                            <p class="cert-user-name">Gayatri Ghogare</p>
+                            <p class="cert-org">Oracle University | Oracle Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Section -->
+        <section id="focus" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Current Specializations</h2>
+                    <p>The core domains where I am currently focusing my learning and professional development.</p>
+                </div>
+                <div class="focus-grid">
+                    <div class="focus-item">
+                        <i data-lucide="layout" size="48"></i>
+                        <h4>Frontend Dev</h4>
+                    </div>
+                    <div class="focus-item">
+                        <i data-lucide="cloud" size="48"></i>
+                        <h4>Cloud Deployment</h4>
+                    </div>
+                    <div class="focus-item">
+                        <i data-lucide="smartphone" size="48"></i>
+                        <h4>Android Dev</h4>
+                    </div>
+                    <div class="focus-item">
+                        <i data-lucide="brain" size="48"></i>
+                        <h4>Artificial Intelligence</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Professional Resumes</h2>
+                    <p>Tailored documentation highlighting my specific expertise for different roles.</p>
+                </div>
+                <div class="resume-grid">
+                    <div class="resume-download-card">
+                        <i data-lucide="layout" size="48"></i>
+                        <h3>Frontend Developer</h3>
+                        <p>Optimized for web development and UI/UX design roles.</p>
+                        <a href="assets/Frontend developer.pdf" target="_blank" class="btn btn-outline">Download
+                            Resume</a>
+                    </div>
+                    <div class="resume-download-card">
+                        <i data-lucide="smartphone" size="48"></i>
+                        <h3>Android Developer</h3>
+                        <p>Focused on Kotlin, Firebase, and mobile architecture.</p>
+                        <a href="assets/android develop2.pdf" target="_blank" class="btn btn-outline">Download
+                            Resume</a>
+                    </div>
+                    <div class="resume-download-card">
+                        <i data-lucide="cpu" size="48"></i>
+                        <h3>AI / Software Engineer</h3>
+                        <p>Highlighting AI integrations and backend logic skills.</p>
+                        <a href="assets/ai.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h2 class="text-gradient">Let's Build Something Meaningful</h2>
+                        <p>I'm currently looking for new opportunities and collaborations. Whether you have a question
+                            or just want to say hi, my inbox is always open.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon"><i data-lucide="mail"></i></div>
+                                <div class="method-details">
+                                    <h4>Email</h4>
+                                    <p>ghogareg474@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon"><a
+                                        href="https://www.linkedin.com/in/gayatri-ghogare-b86948330/"><i
+                                            class="fa-brands fa-linkedin"></i></a></div>
+                                <div class="method-details">
+                                    <h4>LinkedIn</h4>
+                                    <p>gayatri-ghogare-b86948330</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon"><a href="https://github.com/gayatridot"><i
+                                            class="fa-brands fa-github"></i></a></div>
+                                <div class="method-details">
+                                    <h4>GitHub</h4>
+                                    <p>github.com/gayatridot</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form name="contact" id="contact-form" method="POST" data-netlify="true" class="contact-form">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="How can I help you?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Send Message
+                            <i data-lucide="send" size="18"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="#hero" class="footer-logo logo">GAYATRI<span>.</span></a>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Gayatri Ghogare. Designed and Developed with precision.</p>
         </div>
-        <p class="experience-meta">Self-driven projects to strengthen web fundamentals.</p>
-        <ul>
-          <li>Created <strong>Amazon Clone</strong> (HTML/CSS) for responsive layouts.</li>
-          <li>Built <strong>Tic-Tac-Toe Game</strong> with interactive logic.</li>
-          <li>Designed <strong>Portfolio Website</strong> for personal branding.</li>
-          <li>Skills gained: HTML, CSS, JavaScript basics, GitHub hosting, responsive design.</li>
-        </ul>
-      </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-image">
+                <img id="modalImg" src="" alt="Certificate">
+            </div>
+            <div class="modal-details">
+                <span class="modal-tag" id="modalTag">AI & Cloud</span>
+                <h2 id="modalTitle">Certificate Title</h2>
+                <p class="modal-desc" id="modalDesc">Detailed description of what this certification covers and the
+                    skills acquired.</p>
+
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <h4>Organization</h4>
+                        <p id="modalOrg">Oracle University</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Date</h4>
+                        <p id="modalDate">Sep 2025</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>ID</h4>
+                        <p id="modalId">S4F25_205137</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Status</h4>
+                        <p>Verified ✔️</p>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" target="_blank" class="btn btn-primary" id="modalVerify">
+                        Verify <i data-lucide="shield-check"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gayatri-ghogare-b86948330/" target="_blank"
+                        class="btn btn-outline">
+                        LinkedIn <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  </br>
+
+    <!-- GSAP & Custom Logic -->
+    <script src="script.js"></script>
+    <script>
+        const certsData = {
+            1: {
+                title: "Green Skills and Artificial Intelligence",
+                org: "Edunet Foundation | Shell | AICTE",
+                date: "February 2026",
+                desc: "Mastered the intersection of sustainability and AI, focusing on green technologies, carbon footprint optimization, and building intelligent solutions for environmental challenges.",
+                tag: "AI & Sustainability",
+                id: "S4F25_205137",
+                img: "https://files.catbox.moe/afzr8a.jfif",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            },
+            2: {
+                title: "Prompt Engineering for Career Awareness",
+                org: "CSRBOX | IBM SkillsBuild",
+                date: "March 2026",
+                desc: "Mastered advanced prompt engineering techniques, LLM interaction patterns, and applying generative AI to accelerate career development and software productivity.",
+                tag: "Artificial Intelligence",
+                id: "Spring-Cert-2026",
+                img: "https://files.catbox.moe/4jkyud.jpg",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            },
+            3: {
+                title: "Building an Image Editing Serverless Application",
+                org: "AWS | AI for Bharat",
+                date: "December 2025",
+                desc: "Developed a full-stack serverless application on AWS featuring AI-powered image editing, cloud-native storage, and scalable backend orchestration.",
+                tag: "Cloud Development",
+                id: "2025H2S11AB-W300049",
+                img: "https://files.catbox.moe/x7uuzk.jpg",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            },
+            4: {
+                title: "Android Developer Virtual Internship",
+                org: "Google for Developers | EduSkills",
+                date: "Dec 2025",
+                desc: "Completed an intensive internship focused on modern Android development, including Jetpack Compose, MVVM architecture, and high-performance mobile UI patterns.",
+                tag: "Mobile Development",
+                id: "7a96b11531935a8d9e9a9030df384f48",
+                img: "https://files.catbox.moe/jz796x.PNG",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            },
+            5: {
+                title: "Java (Basic) Skill Certification",
+                org: "HackerRank",
+                date: "November 2025",
+                desc: "Validated deep understanding of Java fundamentals, object-oriented programming, and complex algorithmic problem-solving through rigorous assessment.",
+                tag: "Programming",
+                id: "F6C3FAACBDO",
+                img: "https://files.catbox.moe/xohs4d.png",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            },
+            6: {
+                title: "Oracle Certified AI Foundations Associate",
+                org: "Oracle University",
+                date: "September 2025",
+                desc: "Certified in Oracle Cloud Infrastructure (OCI) AI services, including machine learning fundamentals, natural language processing, and computer vision models.",
+                tag: "Cloud & AI",
+                id: "OCI-AI-2025-001",
+                img: "https://files.catbox.moe/42jftf.jpg",
+                verify: "https://www.linkedin.com/in/gayatri-ghogare-b86948330/"
+            }
+        };
 
 
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>News App</h3>
-      <p>API integration, JSON parsing, RecyclerView</p>
-      <a href="https://github.com/gayatridot/News" target="_blank">View Project</a>
-    </div>
+        const modal = document.getElementById('certModal');
+        const cards = document.querySelectorAll('.cert-card');
+        const closeBtn = document.getElementById('closeModal');
 
-    <div class="project-card">
-      <h3>My Music APP</h3>
-      <p>media playback, file handling</p>
-      <a href="https://github.com/gayatridot/MyMusic" target="_blank">View Project</a>
-    </div>
+        cards.forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                const id = index + 1; // Assuming order matches
+                const data = certsData[id];
 
-    <div class="project-card">
-      <h3>Counter App</h3>
-      <p>Counter App with activities like fuel estimator calculation</p>
-      <a href="https://github.com/gayatridot/CounterApp" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Lemon Juice App</h3>
-      <p>UI layout, design principles, drawable resources</p>
-      <a href="https://github.com/gayatridot/LemonJuice" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Dice rolling App</h3>
-      <p>UI layout, design principles</p>
-      <a href="https://github.com/gayatridot/DiceRollingApp" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Amazon-clone</h3>
-      <p>HTML,CSS</p>
-      <a href="https://github.com/gayatridot/Amazon-Clone" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Image Editting App</h3>
-      <p>API gateway, AWS cloud,Cognito Authorization, NoSQL database</p>
-      <a href="https://github.com/gayatridot/ImageEdittingApp" target="_blank">View Project</a>
-    </div>
-  </section>
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <ul class="cert-list">
-      <li>Eduskills cohort 10 week Internship Certificate</li>
-      <li>Google Playstore Listing Certificate</li>
-      <li>Oracle Gen AI</li>
-      <li>Freedom With AI</li>
-      <li>Control Case Audit Bootcamp</li>
-      <li>Data Science & Analytics</li>
-      <li>Java Intermediate</li>
-      <li>Python Developer</li>
-      <li>AWS Solution Architecture Job Simulation</li>
-      <li>Software Engineering Job Simulation</li>
-      <li>Commercial Project Manager Simulation</li>
-      <li>Data Analytics with AI</li>
-      <li>Deloitte Data Analytics Job Simulation</li>
-    </ul>
-  </section>
+                if (data) {
+                    document.getElementById('modalTitle').innerText = data.title;
+                    document.getElementById('modalOrg').innerText = data.org;
+                    document.getElementById('modalDate').innerText = data.date;
+                    document.getElementById('modalDesc').innerText = data.desc;
+                    document.getElementById('modalTag').innerText = data.tag;
+                    document.getElementById('modalId').innerText = data.id;
+                    document.getElementById('modalImg').src = data.img;
+                    document.getElementById('modalVerify').href = data.verify || "#";
 
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 
 </html>
