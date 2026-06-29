@@ -75,6 +75,7 @@ body {
 
 .text-gradient {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1125,6 +1126,18 @@ footer {
         width: 100%;
     }
 }
+
+.load-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#load-more {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 
 /* --- Modal / Lightbox --- */
 
