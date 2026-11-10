@@ -3,7 +3,7 @@
 A world-class, recruiter-focused, single-page portfolio website designed for high-impact professional presentation. This portfolio positions Gayatri as a **Frontend Developer with Android Development Experience and Growing AI Expertise.**
 
 ## 🚀 Live Demo
-[View Live Portfolio](https://gayatridot.vercel.app) *(Replace with actual link if deployed)*
+[View Live Portfolio](https://gayatridot.vercel.app) 
 
 ## ✨ Key Features
 - **Premium Aesthetics**: Minimalist, high-performance design inspired by the top 0.1% developer portfolios.
